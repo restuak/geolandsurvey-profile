@@ -1,26 +1,25 @@
 
-import { Button, Container, Overlay, Text, Title } from '@mantine/core';
-import classes from "../components/css/Hero.module.css";
- 
 export default function Hero () {
     return (
-    <div className={classes.hero}>
-      <Overlay
-        gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
-        opacity={1}
-        zIndex={0}
-      />
-      <Container className={classes.container} size="md">
-        <Title className={classes.title}>A fully featured React components library</Title>
-        <Text className={classes.description} size="xl" mt="xl">
-          Build fully functional accessible web applications faster than ever – Mantine includes
-          more than 120 customizable components and hooks to cover you in any situation
-        </Text>
-
-        <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-          Get started
-        </Button>
-      </Container>
+<div
+  className="hero h-screen"
+  style={{
+    backgroundImage:
+      "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+  }}
+>
+  <div className="hero-overlay"></div>
+  <div className="hero-content text-neutral-content text-center">
+    <div className="max-w-md">
+      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+      <p className="mb-5">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <button className="btn btn-primary">Get Started</button>
     </div>
+  </div>
+</div>
+
   );
 }
