@@ -14,8 +14,8 @@ export default function Hero () {
             <p className="mb-5">
               Let's talk about geospatial and solve your problem together.
             </p>
-            <button className="btn btn-primary bg-[#DB2139] border-[#0C566D] ">
-              <a href="/#service">Our Service</a>
+            <button className="btn btn-primary bg-[#992b39] border-[#0C566D] ">
+              <a href="/#service">OUR SERVICE</a>
             </button>
           </div>
         </div>
