@@ -1,7 +1,7 @@
 import { MdAssuredWorkload } from "react-icons/md";
-export default function Features() {
+export default function ServiceFront() {
   return (
-    <main className="w-full h-full ">
+    <main className="w-full h-full " id="service">
       <div>
         <h2 className="text-[#0C566D] text-4xl p-5 pb-0 font-bold justify-center items-center text-center">
           OUR SERVICE
