@@ -1,7 +1,5 @@
-
+import Image from "next/image";
 export default function Navbar() {
-
-
   return (
     <div className="navbar bg-[#0C566D] shadow-sm fixed w-full backdrop-blur-md z-50">
       <div className="navbar-start">
@@ -18,13 +16,12 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h7"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
@@ -63,16 +60,14 @@ export default function Navbar() {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            {" "}
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />{" "}
+            />
           </svg>
         </button>
-        
       </div>
     </div>
   );

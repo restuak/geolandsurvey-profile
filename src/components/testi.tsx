@@ -23,7 +23,7 @@ export default async function Testi() {
           THEY SAID
         </h2>
       </div>
-      <div className="container  text-white  lg:w-[35%] w-full gap-5 px-5 py-5 mx-auto flex flex-wrap">
+      <div className="container  text-neutral-300  lg:w-[35%] w-full gap-5 px-5 py-5 mx-auto flex flex-wrap">
         <div className="carousel w-full">
           <div
             id="slide1"
