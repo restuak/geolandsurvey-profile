@@ -19,7 +19,7 @@ interface Feature43Props {
 }
 
 const ServiceForCus = ({
-  heading = "Why Work With Us?",
+  heading = "",
   reasons = [
     {
       title: "Quality",
@@ -39,31 +39,31 @@ const ServiceForCus = ({
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
       icon: <RadioTower className="size-6" />,
     },
-    {
-      title: "Innovation",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
-      icon: <WandSparkles className="size-6" />,
-    },
-    {
-      title: "Results",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
-      icon: <Layers className="size-6" />,
-    },
-    {
-      title: "Efficiency",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
-      icon: <BatteryCharging className="size-6" />,
-    },
+    // {
+    //   title: "Innovation",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+    //   icon: <WandSparkles className="size-6" />,
+    // },
+    // {
+    //   title: "Results",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+    //   icon: <Layers className="size-6" />,
+    // },
+    // {
+    //   title: "Efficiency",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
+    //   icon: <BatteryCharging className="size-6" />,
+    // },
   ],
 }: Feature43Props) => {
   return (
-    <section className="py-12 pt-0 pb-0">
-      <div className="container p-10 min-lg:p-35">
+    <section className="py-12 pt-0 pb-0 flex items-center justify-center">
+      <div className="container p-12 pt-5 pb-5 min-lg:p-25 min-lg:pt-7 ">
         <div className="mb-10 md:mb-20">
-          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
+          <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl uppercase text-[#0C566D]">
             {heading}
           </h2>
         </div>

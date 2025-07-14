@@ -19,7 +19,8 @@ const defaultFaqs: FaqItem[] = [
       " We offer a wide range of services including topographic surveys,drone mapping, boundary surveys, hydrographic surveys, and GIS dataprocessing. Our solutions support construction, mining, land planning, and infrastructure projects.",
   },
   {
-    question: "Are the survey results and maps compliant with industry standards?",
+    question:
+      "Are the survey results and maps compliant with industry standards?",
     answer:
       "Yes, all of our deliverables adhere to both national (BIG, BPN) and international standards. We use advanced technologies such as GNSS, UAV (drones), and professional mapping software to ensure high accuracy and quality.",
   },
@@ -42,7 +43,7 @@ const FandQ = ({
   faqs = defaultFaqs,
 }: Faq5Props) => {
   return (
-    <section className="py-32 pb-5 pt-5">
+    <section className="py-32 pb-5 pt-5 flex items-center justify-center">
       <div className="container p-10 min-lg:p-5">
         <div className="text-center">
           <Badge className="text-xs font-medium">{badge}</Badge>
@@ -54,22 +55,15 @@ const FandQ = ({
         <div className="mx-auto mt-14 max-w-xl">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-8 flex gap-4">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-secondary font-mono text-xs text-primary">
-                {index + 1}
-              </span>
               <div className="collapse collapse-arrow bg-neutral-300  border border-base-300">
                 <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold">
+                <div className="collapse-title font-semibold text-[16px] lg:text-lg">
                   {faq.question}
                 </div>
-                <div className="collapse-content text-lg">{faq.answer}</div>
-              </div>
-              {/* <div>
-                <div className="mb-2 flex items-center justify-between">
-                  <h3 className="font-medium collapse-title"></h3>
+                <div className="collapse-content text-[16px] lg:text-lg">
+                  {faq.answer}
                 </div>
-                <p className="text-sm text-muted-foreground collapse-content"></p>
-              </div> */}
+              </div>
             </div>
           ))}
         </div>

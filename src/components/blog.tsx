@@ -30,7 +30,7 @@ interface BlogProps {
 
 const Blog = ({
   tagline = "Latest Updates",
-  heading = "Blog Posts",
+  heading = "Blog",
   description = "Discover the latest trends, tips, and best practices in modern web development. From UI components to design systems, stay updated with our expert insights.",
   buttonText = "View all articles",
   buttonUrl = "https://shadcnblocks.com",
@@ -80,7 +80,7 @@ const Blog = ({
           <Badge variant="secondary" className="mb-6">
             {tagline}
           </Badge>
-          <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+          <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl uppercase">
             {heading}
           </h2>
           <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">

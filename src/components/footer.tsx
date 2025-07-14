@@ -10,8 +10,8 @@ export default function Footer() {
         <a className="link link-hover" href="/aboutus">
           ABOUT US
         </a>
-        <a className="link link-hover" href="/team">
-          OUR TEAMS
+        <a className="link link-hover" href="/blog">
+          BLOG
         </a>
       </nav>
       <nav>
