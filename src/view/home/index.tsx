@@ -6,18 +6,20 @@ import Footer from "@/components/footer";
 import ServiceFront from "@/components/servicefront";
 import ServiceForCus from "@/components/serviceforcus";
 import Blog from "@/components/blog";
-// import Client from "@/components/client";
+// import Stat from "@/components/stat";
+import Client from "@/components/client";
 
 export default function HomeView() {
   return (
     <div className="">
       <Navbar />
       <Hero />
+      {/* <Stat /> */}
       <ServiceForCus />
       <ServiceFront />
       <Testi />
       <Blog />
-      {/* <Client /> */}
+      <Client />
       <FandQ />
       <Footer />
     </div>

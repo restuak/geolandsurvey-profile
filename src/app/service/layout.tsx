@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "ABOUT US - Geoland Survey Lab's Website",
+  title: "OUR SERVICE - Geoland Survey Lab's Website",
   description: "Geoland Survey Lab's Website",
 };
 

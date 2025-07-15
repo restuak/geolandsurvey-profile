@@ -11,20 +11,20 @@ type User = {
   };
 };
 export default async function RandomUsersPage() {
-    const responseman = await axios.get(
+    const teamMan = await axios.get(
       "https://randomuser.me/api/?nat=dk&results=1"
     );
-    const manteam: User[] = responseman.data.results;
+    const manteam: User[] = teamMan.data.results;
 
-  const responseop = await axios.get(
+  const teamOp = await axios.get(
     "https://randomuser.me/api/?nat=us,dk,fr,gb&results=3"
   );
-  const opteam: User[] = responseop.data.results;
+  const opteam: User[] = teamOp.data.results;
 
-    const responsesurvey = await axios.get(
+    const teamSurvey = await axios.get(
       "https://randomuser.me/api/?nat=fr,gb&results=10"
     );
-    const surveyteam: User[] = responsesurvey.data.results;
+    const surveyteam: User[] = teamSurvey.data.results;
 
   return (
     <main className="pb-20 w-full h-full ">
@@ -43,15 +43,15 @@ export default async function RandomUsersPage() {
           DIRECTOR
         </h2>
         <div className="container p-10 max-sm:p-5 grid grid-cols-0 md:grid-cols-0 lg:grid-cols-0 gap-4 justify-center items-center text-center">
-          {manteam.map((manteam, index) => (
+          {manteam.map((manTeam, index) => (
             <li key={index} className="border p-4 rounded shadow">
               <img
-                src={manteam.picture.thumbnail}
-                alt={`${manteam.name.first} ${manteam.name.last}`}
+                src={manTeam.picture.thumbnail}
+                alt={`${manTeam.name.first} ${manTeam.name.last}`}
                 className="rounded-full p-2 w-25 h-25 relative mx-auto flex flex-wrap justify-center items-center text-center"
               />
               <div className="font-semibold text-lg text-[#0C566D]">
-                {manteam.name.first} {manteam.name.last}
+                {manTeam.name.first} {manTeam.name.last}
               </div>
               <div className="text-lg font-semibold text-[#0C566D]"></div>
             </li>
@@ -62,15 +62,15 @@ export default async function RandomUsersPage() {
           OPERASIONAL TEAM
         </h2>
         <div className="container p-10 max-sm:p-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-4 justify-center items-center text-center">
-          {opteam.map((opteam, index) => (
+          {opteam.map((opTeam, index) => (
             <li key={index} className="border p-4 rounded shadow">
               <img
-                src={opteam.picture.thumbnail}
-                alt={`${opteam.name.first} ${opteam.name.last}`}
+                src={opTeam.picture.thumbnail}
+                alt={`${opTeam.name.first} ${opTeam.name.last}`}
                 className="rounded-full p-2 w-25 h-25 relative mx-auto flex flex-wrap justify-center items-center text-center"
               />
               <div className="font-semibold text-lg text-[#0C566D]">
-                {opteam.name.first} {opteam.name.last}
+                {opTeam.name.first} {opTeam.name.last}
               </div>
               <div className="text-lg font-semibold text-[#0C566D]"></div>
             </li>
@@ -81,15 +81,15 @@ export default async function RandomUsersPage() {
           SURVEY TEAM
         </h2>
         <div className="container p-10 max-sm:p-5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center items-center text-center">
-          {surveyteam.map((surveyteam, index) => (
+          {surveyteam.map((surveyTeam, index) => (
             <li key={index} className="border p-4 rounded shadow">
               <img
-                src={surveyteam.picture.thumbnail}
-                alt={`${surveyteam.name.first} ${surveyteam.name.last}`}
+                src={surveyTeam.picture.thumbnail}
+                alt={`${surveyTeam.name.first} ${surveyTeam.name.last}`}
                 className="rounded-full p-2 w-25 h-25 relative mx-auto flex flex-wrap justify-center items-center text-center"
               />
               <div className="font-semibold text-lg text-[#0C566D]">
-                {surveyteam.name.first} {surveyteam.name.last}
+                {surveyTeam.name.first} {surveyTeam.name.last}
               </div>
               <div className="text-lg font-semibold text-[#0C566D]"></div>
             </li>
