@@ -47,7 +47,9 @@ const FandQ = ({
       <div className="container p-10 min-lg:p-5">
         <div className="text-center">
           <Badge className="text-xs font-medium">{badge}</Badge>
-          <h1 className="mt-4 text-4xl font-semibold">{heading}</h1>
+          <h1 className="mt-4 text-3xl min-md:text-4xl text-[#0C566D] font-bold text-pretty uppercase">
+            {heading}
+          </h1>
           <p className="mt-6 font-medium text-muted-foreground">
             {description}
           </p>

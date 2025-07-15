@@ -17,7 +17,7 @@ export default function Hero() {
               src="/gl.png"
               height={150}
               width={150}
-              className="container relative flex justify-center items-center"
+              className="container mx-auto w-35 h-35 relative flex justify-center items-center"
             />
             <h1 className="mb-5 text-5xl font-bold">GEOLAND SURVEY</h1>
             <p className="mb-5">

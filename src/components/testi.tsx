@@ -19,7 +19,7 @@ export default async function Testi() {
   return (
     <main className="w-[full] h-full ">
       <div>
-        <h2 className="text-[#0C566D] text-4xl p-10 pb-0 pt-15 font-bold justify-center items-center text-center">
+        <h2 className="text-[#0C566D] text-3xl min-md:text-4xl p-10 pb-0 pt-15 font-bold justify-center items-center text-center">
           THEY SAID
         </h2>
       </div>
@@ -120,11 +120,7 @@ export default async function Testi() {
                     sensing analysis provided invaluable data that greatly
                     enhanced our project outcomes. Geoland Survey's spatial
                     analysis services are top-notch, delivering actionable
-                    insights with remarkable accuracy. The team's expertise in
-                    GIS mapping and data interpretation is unparalleled, making
-                    them a trusted partner. We were impressed by their
-                    commitment to delivering high-quality geospatial solutions
-                    tailored to our needs.
+                    insights with remarkable accuracy.
                   </p>
                 </div>
               )}
@@ -159,9 +155,7 @@ export default async function Testi() {
                     geospatial services and client-focused approach. Their work
                     consistently exceeds expectations and delivers measurable
                     value. Their dedication to innovation and continuous
-                    improvement sets them apart as industry leaders. Partnering
-                    with Geoland Survey has been a game-changer for our
-                    projects, and we look forward to future collaborations.
+                    improvement sets them apart as industry leaders. We look forward to future collaborations.
                   </p>
                 </div>
               )}

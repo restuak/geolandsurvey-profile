@@ -4,9 +4,8 @@ import Testi from "@/components/testi";
 import FandQ from "@/components/fandq";
 import Footer from "@/components/footer";
 import ServiceFront from "@/components/servicefront";
-import ServiceForCus from "@/components/serviceforcus";
+import WhyWithUS from "@/components/whywithus";
 import Blog from "@/components/blog";
-// import Stat from "@/components/stat";
 import Client from "@/components/client";
 
 export default function HomeView() {
@@ -14,11 +13,10 @@ export default function HomeView() {
     <div className="">
       <Navbar />
       <Hero />
-      {/* <Stat /> */}
-      <ServiceForCus />
+      <WhyWithUS />
       <ServiceFront />
-      <Testi />
       <Blog />
+      <Testi />
       <Client />
       <FandQ />
       <Footer />

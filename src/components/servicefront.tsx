@@ -13,35 +13,38 @@ export default function ServiceFront() {
           <div className=" bg-[#d4d4d4] px-8 pt-16 pb-16 relative rounded-3xl">
             <MdAssuredWorkload className="text-2xl mb-1 w-15 h-15" />
             <h1 className="font-bold sm:text-2xl text-xl  mb-3">
-              Raclette Blueberry Nextious
+              GIS (Geographic Information System) or Web-GIS
             </h1>
             <p className="mb-3">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
+              A system used to manage, analyze, and visualize spatial data.
+              Examples include mapping infrastructure, land zoning, or
+              identifying flood-prone areas.
             </p>
           </div>
         </div>
         <div className="h-full p-3 lg:w-1/3">
           <div className="bg-[#d4d4d4] px-8 pt-16 pb-16 relative rounded-3xl">
             <MdAssuredWorkload className="text-2xl mb-1 w-15 h-15" />
-            <h1 className=" sm:text-2xl text-xl  mb-3">
-              Ennui Snackwave Thundercats
+            <h1 className=" font-bold sm:text-2xl text-xl  mb-3">
+              Land Survey
             </h1>
             <p className="mb-3 ">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
+              Accurate measurement and mapping of land positions using tools
+              like total stations or GNSS. Commonly used for construction
+              planning, land ownership boundaries, or spatial development.
             </p>
           </div>
         </div>
         <div className="h-full p-3 lg:w-1/3">
           <div className="bg-[#d4d4d4] px-8 pt-16 pb-16 relative rounded-3xl">
             <MdAssuredWorkload className="text-2xl mb-1 w-15 h-15" />
-            <h1 className=" sm:text-2xl text-xl mb-3">
-              Selvage Poke Waistcoat
+            <h1 className=" font-bold sm:text-2xl text-xl mb-3">
+              Photogrammetry
             </h1>
             <p className="mb-3">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
+              A technique for creating maps or 3D models from aerial or drone
+              imagery. Ideal for topographic mapping, mining volume
+              calculations, or large-scale area documentation efficiently.
             </p>
           </div>
         </div>
