@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="footer footer-horizontal footer-center bg-[#0C566D] border-t-2 border-[#992b39] text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover" href="/service">
-          OUR SERVICE
+        <a className="link link-hover" href="/services">
+          OUR SERVICES
         </a>
         <a className="link link-hover" href="/aboutus">
           ABOUT US

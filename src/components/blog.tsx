@@ -33,61 +33,62 @@ const Blog = ({
   heading = "Blog",
   description = "Discover the latest trends, tips, and best practices in modern geospasial surveying",
   buttonText = "View all articles",
-  buttonUrl = "https://shadcnblocks.com",
+  buttonUrl = "/blog",
   posts = [
     {
       id: "post-1",
-      title: "Getting Started with shadcn/ui Components",
+      title: "Example Title Post Blog 1",
       summary:
-        "Learn how to quickly integrate and customize shadcn/ui components in your Next.js projects. We'll cover installation, theming, and best practices for building modern interfaces.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
       label: "Tutorial",
       author: "Sarah Chen",
       published: "1 Jan 2024",
-      url: "https://shadcnblocks.com",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      url: "/blog/post1",
+      image: "/gl-full.png",
     },
     {
       id: "post-2",
-      title: "Building Accessible Web Applications",
+      title: "Example Title Post Blog 2",
       summary:
-        "Explore how to create inclusive web experiences using shadcn/ui's accessible components. Discover practical tips for implementing ARIA labels, keyboard navigation, and semantic HTML.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
       label: "Accessibility",
       author: "Marcus Rodriguez",
       published: "1 Jan 2024",
-      url: "https://shadcnblocks.com",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      url: "/blog/post2",
+      image: "/gl-full.png",
     },
     {
       id: "post-3",
-      title: "Modern Design Systems with Tailwind CSS",
+      title: "Example Title Post Blog 3",
       summary:
-        "Dive into creating scalable design systems using Tailwind CSS and shadcn/ui. Learn how to maintain consistency while building flexible and maintainable component libraries.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aliquid exercitationem, quos explicabo repellat?",
       label: "Design Systems",
       author: "Emma Thompson",
       published: "1 Jan 2024",
-      url: "https://shadcnblocks.com",
-      image:
-        "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+      url: "/blog/post3",
+      image: "/gl-full.png",
     },
   ],
 }: BlogProps) => {
   return (
-    <section className="py-32 pt-0 pb-0">
+    <section className="py-10 min-md:py-25 min-md:pt-10 pb-0">
       <div className="container p-10 mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
-          <Badge variant="secondary" className="mb-6">
+          <Badge variant="secondary" className="mb-6 text-md min-md:text-xl">
             {tagline}
           </Badge>
-          <h2 className="mb-3 text-3xl min-md:text-4xl text-[#0C566D] font-bold text-pretty md:mb-4  lg:mb-6 lg:max-w-3xl lg:text-5xl uppercase">
+          <h2 className="mb-3 text-3xl min-md:text-4xl text-[#0C566D] font-bold text-pretty md:mb-4  lg:mb-6 lg:max-w-3xl uppercase">
             {heading}
           </h2>
           <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">
             {description}
           </p>
-          <Button variant="link" className="w-full sm:w-auto" asChild>
-            <a href={buttonUrl} target="_blank">
+          <Button
+            variant="link"
+            className="w-full sm:w-auto text-md min-md:text-xl"
+            asChild
+          >
+            <a href={buttonUrl}>
               {buttonText}
               <ArrowRight className="ml-2 size-4" />
             </a>

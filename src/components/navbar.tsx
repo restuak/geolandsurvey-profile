@@ -32,13 +32,16 @@ export default function Navbar() {
               <a href="/">HOME</a>
             </li>
             <li>
-              <a href="/service">OUR SERVICE</a>
+              <a href="/services">OUR SERVICES</a>
             </li>
             <li>
               <a href="/aboutus">ABOUT US</a>
             </li>
             <li>
-              <a href="/team">OUR TEAMS</a>
+              <a href="/blog">BLOG</a>
+            </li>
+            <li>
+              <a href="/contact">CONTACT US</a>
             </li>
           </ul>
         </div>
