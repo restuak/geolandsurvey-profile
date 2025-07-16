@@ -1,8 +1,9 @@
 
-export default function ServiceFull () {
+export default function ServiceTop () {
     return (
+      <main className="container relative ">
       <div
-        className="hero min-h-screen"
+        className="hero min-h-[30%]"
         style={{
           backgroundImage:
             "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
@@ -20,6 +21,7 @@ export default function ServiceFull () {
           </div>
         </div>
       </div>
+      </main>
     );
 }
 

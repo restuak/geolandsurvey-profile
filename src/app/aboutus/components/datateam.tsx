@@ -10,7 +10,7 @@ type User = {
   thumbnail: string;
   };
 };
-export default async function RandomUsersPage() {
+export default async function DataTeam() {
     const teamMan = await axios.get(
       "https://randomuser.me/api/?nat=dk&results=1"
     );

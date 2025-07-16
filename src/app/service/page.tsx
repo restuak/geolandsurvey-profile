@@ -1,12 +1,12 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import ServiceFull from "./service";
+import ServiceTop from "./components/servicetop";
 
 export default function ServiceView() {
   return (
     <div className="">
       <Navbar />
-      <ServiceFull />
+      <ServiceTop />
       <Footer />
     </div>
   );
