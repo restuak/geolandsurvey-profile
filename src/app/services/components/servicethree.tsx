@@ -27,7 +27,7 @@ export default function ServiceThree() {
               </div>
             </div>
             <img
-              src="/gl-full.png"
+              src="/6.jpg"
               alt="GIS"
               className="h-full w-full object-cover"
             />

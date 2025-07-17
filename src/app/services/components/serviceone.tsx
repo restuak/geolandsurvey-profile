@@ -26,7 +26,7 @@ export default function ServiceOne() {
               </div>
             </div>
             <img
-              src="/gl-full.png"
+              src="/3.jpg"
               alt="GIS"
               className="h-full w-full object-cover"
             />

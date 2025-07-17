@@ -58,7 +58,7 @@ export default function Navbar() {
         <button className="btn btn-ghost btn-circle hover:bg-[#992b39]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 "
+            className="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -66,10 +66,11 @@ export default function Navbar() {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              strokeWidth={2}
+              d="M15 12H3m0 0l4-4m-4 4l4 4m9 4h2a2 2 0 002-2V6a2 2 0 00-2-2h-2"
             />
           </svg>
+          
         </button>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function ServiceTwo() {
               </div>
             </div>
             <img
-              src="/gl-full.png"
+              src="/7.jpg"
               alt="GIS"
               className="h-full w-full object-cover"
             />
