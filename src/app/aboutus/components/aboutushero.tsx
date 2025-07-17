@@ -4,7 +4,7 @@ export default function AboutUsHero() {
       <div
         className="hero min-h-[35vh]"
         style={{
-          backgroundImage: "url('/1.jpg');",
+          backgroundImage: "url('/4.jpg');",
         }}
       >
         <div className="hero-overlay"></div>
