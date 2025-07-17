@@ -10,7 +10,7 @@ export default function Hero() {
       );
     }, 1000);
 
-    return () => clearTimeout(timer); // bersihkan timer saat unmount
+    return () => clearTimeout(timer);
   }, []);
   return (
     <main id="hero">
