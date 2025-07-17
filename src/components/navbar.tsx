@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import LoginModal from "./loginmodal";
 export default function Navbar() {
   return (
     <div className="navbar bg-[#0C566D] shadow-sm fixed w-full backdrop-blur-md z-50">
@@ -10,7 +12,7 @@ export default function Navbar() {
             className="btn btn-ghost btn-circle bg-[#992b39]"
           >
             <svg
-              xmlns="../gl.png"
+              xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
@@ -55,23 +57,7 @@ export default function Navbar() {
         </a>
       </div>
       <div className="navbar-end text-white ">
-        <button className="btn btn-ghost btn-circle hover:bg-[#992b39]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 12H3m0 0l4-4m-4 4l4 4m9 4h2a2 2 0 002-2V6a2 2 0 00-2-2h-2"
-            />
-          </svg>
-          
-        </button>
+        <LoginModal />
       </div>
     </div>
   );
