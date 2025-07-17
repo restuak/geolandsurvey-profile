@@ -1,6 +1,15 @@
+"use client"
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      alert("Mohon maaf selama ada pesan ini, website masih saya developing, Kak :)");
+    }, 1000);
+
+    return () => clearTimeout(timer); // bersihkan timer saat unmount
+  }, []);
   return (
     <main id="hero">
       <div
