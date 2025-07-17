@@ -9,11 +9,10 @@ import SkeletonBlog from "./skeletonbloglist";
 interface Post {
   title: string;
   summary: string;
-  label: string;
   author: string;
-  published: string;
-  image: string;
-  tags?: string[];
+  time: string;
+  images: string;
+  label: string;
   slug: string;
 }
 
@@ -21,7 +20,9 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get("https://giftedstar-us.backendless.app/api/data/blog")
+      .get(
+        "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
+      )
       .then((res) => setPosts(res.data))
       .catch((err) => console.error("Terjadi Galat:", err))
       .finally(() => setLoading(false));
@@ -32,7 +33,9 @@ export default function BlogList() {
 
   useEffect(() => {
     axios
-      .get("https://giftedstar-us.backendless.app/api/data/blog")
+      .get(
+        "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
+      )
       .then((res) => {
         setPosts(res.data);
       })
@@ -59,9 +62,7 @@ export default function BlogList() {
                   <div className="sm:col-span-5">
                     <div className="mb-4 md:mb-6">
                       <div className="flex flex-wrap gap-3 text-xs tracking-wider text-muted-foreground uppercase md:gap-5 lg:gap-6">
-                        {post.tags?.map((tag) => (
-                          <span key={tag}>{tag}</span>
-                        ))}
+                        {post.label}
                       </div>
                     </div>
                     <h3 className="text-xl font-semibold md:text-2xl lg:text-3xl">
@@ -81,7 +82,11 @@ export default function BlogList() {
                       </span>
                       <span className="text-muted-foreground">•</span>
                       <span className="text-muted-foreground">
-                        {post.published}
+                        {new Date(post.time).toLocaleDateString("id-ID", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
                       </span>
                     </div>
                     <div className="mt-6 flex items-center space-x-2 md:mt-8">

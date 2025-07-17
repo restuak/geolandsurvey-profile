@@ -12,10 +12,13 @@ type User = {
 };
 
 export default async function Testi() {
-  const response = await axios.get(
-    "https://randomuser.me/api/?nat=us,dk,fr,gb&results=5"
-  );
-  const users: User[] = response.data.results;
+  try {
+    const response = await axios.get(
+      "https://randomuser.me/api/?nat=us,dk,fr,gb&results=5"
+    );
+
+    const users: User[] = response.data.results;
+
   return (
     <main className="w-[full] h-full ">
       <div>
@@ -37,8 +40,11 @@ export default async function Testi() {
                     alt={`${users[0].name.first} ${users[0].name.last}`}
                     className="rounded-full p-2 w-55 h-55 relative mx-auto flex flex-wrap justify-center items-center text-center"
                   />
-                  <div className="font-bold sm:text-2xl text-xl p-5 mb-3">
+                  <div className="font-bold sm:text-2xl text-xl pb-0">
                     {users[0].name.first} {users[0].name.last}
+                  </div>
+                  <div className="font-semibold text-lg p-5 pt-1 mb-3">
+                    CEO Akarindo Geotama
                   </div>
                   <p className="mb-3">
                     Geoland Survey's attention to detail and professionalism set
@@ -74,8 +80,11 @@ export default async function Testi() {
                     alt={`${users[1].name.first} ${users[1].name.last}`}
                     className="rounded-full p-2 w-55 h-55 relative mx-auto flex flex-wrap justify-center items-center text-center"
                   />
-                  <div className="font-bold sm:text-2xl text-xl p-5 mb-3">
+                  <div className="font-bold sm:text-2xl text-xl pb-0">
                     {users[1].name.first} {users[1].name.last}
+                  </div>
+                  <div className="font-semibold text-lg p-5 pt-1 mb-3">
+                    CEO PT Geosada Perkasa
                   </div>
                   <p className="mb-3">
                     The team's dedication to client satisfaction is evident in
@@ -111,8 +120,11 @@ export default async function Testi() {
                     alt={`${users[2].name.first} ${users[2].name.last}`}
                     className="rounded-full p-2 w-55 h-55 relative mx-auto flex flex-wrap justify-center items-center text-center"
                   />
-                  <div className="font-bold sm:text-2xl text-xl p-5 mb-3">
+                  <div className="font-bold sm:text-2xl text-xl pb-0">
                     {users[2].name.first} {users[2].name.last}
+                  </div>
+                  <div className="font-semibold text-lg p-5 pt-1 mb-3">
+                    Director Akasia Photogeo
                   </div>
                   <p className="mb-3">
                     The geodetic survey conducted by Geoland Survey exceeded our
@@ -147,15 +159,19 @@ export default async function Testi() {
                     alt={`${users[3].name.first} ${users[3].name.last}`}
                     className="rounded-full p-2 w-55 h-55 relative mx-auto flex flex-wrap justify-center items-center text-center"
                   />
-                  <div className="font-bold sm:text-2xl text-xl p-5 mb-3">
+                  <div className="font-bold sm:text-2xl text-xl pb-0">
                     {users[3].name.first} {users[3].name.last}
+                  </div>
+                  <div className="font-semibold text-lg p-5 pt-1 mb-3">
+                    Chief of Badan Informasi Geospasial
                   </div>
                   <p className="mb-3">
                     We highly recommend Geoland Survey for their exceptional
                     geospatial services and client-focused approach. Their work
                     consistently exceeds expectations and delivers measurable
                     value. Their dedication to innovation and continuous
-                    improvement sets them apart as industry leaders. We look forward to future collaborations.
+                    improvement sets them apart as industry leaders. We look
+                    forward to future collaborations.
                   </p>
                 </div>
               )}
@@ -182,10 +198,12 @@ export default async function Testi() {
                     alt={`${users[4].name.first} ${users[4].name.last}`}
                     className="rounded-full p-2 w-55 h-55 relative mx-auto flex flex-wrap justify-center items-center text-center"
                   />
-                  <div className="font-bold sm:text-2xl text-xl p-5 mb-3">
+                  <div className="font-bold sm:text-2xl text-xl pb-0">
                     {users[4].name.first} {users[4].name.last}
                   </div>
-
+                  <div className="font-semibold text-lg p-5 pt-1 mb-3">
+                    CEO Geodeta Akatama
+                  </div>
                   <p className="mb-3">
                     Geoland Survey's comprehensive geospatial solutions have
                     been instrumental in our project's success. Their commitment
@@ -211,57 +229,8 @@ export default async function Testi() {
       </div>
     </main>
   );
+  } catch (error) {
+    console.error("Gagal mengambil data:", error);
+    return <div>Terjadi kesalahan saat mengambil data.</div>;
+  }
 }
-
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-interface Testimonial10Props {
-  quote?: string;
-  author?: {
-    name: string;
-    role: string;
-    avatar: {
-      src: string;
-      alt: string;
-    };
-  };
-}
-
-// const Testimonial10 = ({
-//   quote = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
-//   author = {
-//     name: "Customer Name",
-//     role: "Role",
-//     avatar: {
-//       src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
-//       alt: "Customer Name",
-//     },
-//   },
-// }: Testimonial10Props) => {
-//   return (
-//     <section className="py-32">
-//       <div className="container">
-//         <div className="flex flex-col items-center text-center">
-//           <p className="mb-16 max-w-4xl px-8 font-medium lg:text-3xl">
-//             &ldquo;{quote}&rdquo;
-//           </p>
-//           <div className="flex items-center gap-2 md:gap-4">
-//             <Avatar className="size-12 md:size-16">
-//               <AvatarImage src={author.avatar.src} alt={author.avatar.alt} />
-//               <AvatarFallback>{author.name}</AvatarFallback>
-//             </Avatar>
-//             <div className="text-left">
-//               <p className="text-sm font-medium md:text-base">{author.name}</p>
-//               <p className="text-muted-foreground text-sm md:text-base">
-//                 {author.role}
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export { Testimonial10 };

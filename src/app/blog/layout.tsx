@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function Layout({
 }>) {
   return (
     <html lang="en">
-      <body className=""> {children}</body>
+      <body className="">{children}</body>
     </html>
   );
 }
