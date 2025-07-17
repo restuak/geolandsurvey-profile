@@ -5,7 +5,9 @@ import Image from "next/image";
 export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      alert("Mohon maaf selama ada pesan ini, website masih saya developing, Kak :)");
+      alert(
+        "Mohon maaf selama ada pesan ini, website masih saya developing, Kak  | Blog sectionnya masih saya buat...dll | Terima kasih pengertiannya :)"
+      );
     }, 1000);
 
     return () => clearTimeout(timer); // bersihkan timer saat unmount
