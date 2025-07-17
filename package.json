@@ -25,6 +25,7 @@
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-slot": "^1.2.3",
     "@tabler/icons-react": "^3.34.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@tiptap/extension-link": "^2.24.1",
     "@tiptap/pm": "^2.24.1",
     "@tiptap/react": "^2.24.1",
