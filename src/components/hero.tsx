@@ -17,7 +17,7 @@ export default function Hero() {
       <div
         className="hero h-screen"
         style={{
-          backgroundImage: "url(../2.jpg)",
+          backgroundImage: "url(../7.jpg)",
         }}
       >
         <div className="hero-overlay"></div>

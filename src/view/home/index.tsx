@@ -7,6 +7,7 @@ import ServiceFront from "@/components/servicefront";
 import WhyWithUS from "@/components/whywithus";
 import Blog from "@/components/blog";
 import Client from "@/components/client";
+import Contact from "@/components/contact";
 
 export default function HomeView() {
   return (
@@ -19,6 +20,7 @@ export default function HomeView() {
       <Testi />
       <Client />
       <FandQ />
+      <Contact />
       <Footer />
     </div>
   );
