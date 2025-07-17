@@ -22,16 +22,16 @@ interface Post {
   slug: string;
 }
 export default function Blog() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    axios
-      .get(
-        "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
-      )
-      .then((res) => setPosts(res.data))
-      .catch((err) => console.error("Terjadi Galat:", err))
-      .finally(() => setLoading(false));
-  }, []);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
+  //     )
+  //     .then((res) => setPosts(res.data))
+  //     .catch((err) => console.error("Terjadi Galat:", err))
+  //     .finally(() => setLoading(false));
+  // }, []);
 
   const [posts, setPosts] = useState<Post[]>([]);
 
@@ -64,12 +64,12 @@ export default function Blog() {
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-8">
-          {loading ? (
+          {/* {loading ? (
             <>
               <SkeletonBlog />
             </>
-          ) : (
-            posts.slice(0, 2).map((post) => (
+          ) : ( */}
+            {posts.slice(0, 2).map((post) => (
               <Card
                 key={post.slug}
                 className="grid grid-rows-[auto_auto_1fr_auto] pt-0"
@@ -105,7 +105,7 @@ export default function Blog() {
                 </CardFooter>
               </Card>
             ))
-          )}
+          }
         </div>
         <Button
           variant="link"

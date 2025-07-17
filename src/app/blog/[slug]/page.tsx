@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -59,7 +58,6 @@ export default function BlogPage() {
       <div className="min-h-screen flex items-center justify-center text-center px-4">
         <div>
           <h1 className="text-2xl font-bold mb-2">Artikel tidak ditemukan</h1>
-          <p className="mb-4">Mungkin sudah dihapus atau slug salah.</p>
           <button
             className="bg-blue-600 text-white px-4 py-2 rounded"
             onClick={() => router.push("/blog")}

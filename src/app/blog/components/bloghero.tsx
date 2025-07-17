@@ -4,7 +4,7 @@ export default function BlogHero() {
       <div
         className="hero min-h-[35vh]"
         style={{
-          backgroundImage: "url('/3.jpg');",
+          backgroundImage: "url('/4.jpg')",
         }}
       >
         <div className="hero-overlay"></div>

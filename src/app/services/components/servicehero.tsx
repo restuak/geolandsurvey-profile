@@ -4,7 +4,7 @@ export default function ServiceHero() {
       <div
         className="hero min-h-[35vh]"
         style={{
-          backgroundImage: "url('/6.jpg');",
+          backgroundImage: "url('/2.jpg')",
         }}
       >
         <div className="hero-overlay"></div>
