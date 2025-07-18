@@ -18,34 +18,27 @@ interface Post {
 
 export default function BlogList() {
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    axios
-      .get(
-        "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
-      )
-      .then((res) => setPosts(res.data))
-      .catch((err) => console.error("Terjadi Galat:", err))
-      .finally(() => setLoading(false));
-  }, []);
-
-
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
-      )
-      .then((res) => {
+    const fetchPosts = async () => {
+      try {
+        const res = await axios.get(
+          "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
+        );
         setPosts(res.data);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Terjadi Galat:", err);
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
   }, []);
 
   return (
-    <section className="py-10 pt-0 min-md:py-25 ">
+    <section className="py-10 pt-0 min-md:py-25 bg-neutral-50">
       <div className="container p-10 pt-0 flex flex-col gap-16 justify-center items-center mx-auto">
         <div className="grid gap-y-10 sm:grid-cols-12 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
           {loading ? (
@@ -101,11 +94,12 @@ export default function BlogList() {
                   </div>
                   <div className="order-first sm:order-last sm:col-span-5">
                     <a href={`/blog/${post.slug}`} className="block">
-                      <div className="aspect-16/9 overflow-clip rounded-lg border border-border">
+                      <div className="aspect-16/9  rounded-lg border border-border">
                         <img
                           src={post.images}
                           alt={post.title}
-                          className="h-full w-full object-cover transition-opacity duration-200 fade-in hover:opacity-70"
+                          loading="lazy"
+                          className="h-full w-full object-contain transition-opacity duration-200 hover:opacity-70"
                         />
                       </div>
                     </a>

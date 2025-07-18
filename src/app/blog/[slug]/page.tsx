@@ -106,12 +106,8 @@ export default function BlogPage() {
               />
             )}
             <div
-              className="p-6 prose prose-base sm:prose-lg lg:prose-xl max-w-none dark:prose-invert 
-             prose-p:mb-6 prose-p:indent-8 prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: formatPlainTextToHTML(
-                  blog.content || "<p>Konten tidak tersedia.</p>"
-                ),
+                __html: "<p>Test blog content here</p>",
               }}
             />
           </article>
