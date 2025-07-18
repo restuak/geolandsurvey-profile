@@ -7,7 +7,10 @@ export function RegisterModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="btn btn-ghost btn-circle hover:bg-[#992b39]">
+        <button
+          aria-label="Register"
+          className="btn btn-ghost btn-circle hover:bg-[#992b39]"
+        >
           <UserPlus className="w-5 h-5" />
         </button>
       </DialogTrigger>

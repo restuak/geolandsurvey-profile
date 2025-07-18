@@ -11,7 +11,10 @@ export default function Navbar() {
     <div className="navbar bg-[#0C566D] shadow-sm fixed w-full backdrop-blur-md z-50">
       <div className="navbar-start">
         <div className="dropdown">
-          <Button className="btn btn-ghost btn-circle bg-[#992b39]">
+          <Button
+            aria-label="Open menu"
+            className="btn btn-ghost btn-circle bg-[#992b39]"
+          >
             <Menu />
           </Button>
           <ul
@@ -48,6 +51,7 @@ export default function Navbar() {
         {isLogin ? (
           <div className="flex flex-row gap-3 align-middle">
             <button
+              aria-label="Logout"
               className="p-1 btn btn-ghost btn-circle hover:bg-[#992b39] bg-[#992b39] text-neutral-950 font-extrabold hover:text-neutral-100 "
               onClick={clearAuth}
             >

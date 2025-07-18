@@ -9,7 +9,10 @@ export function LoginModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="btn btn-ghost btn-circle hover:bg-[#992b39]">
+        <button
+          aria-label="Login"
+          className="btn btn-ghost btn-circle hover:bg-[#992b39]"
+        >
           <LogIn className="w-5 h-5" />
         </button>
       </DialogTrigger>

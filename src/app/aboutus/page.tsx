@@ -6,7 +6,7 @@ import OurValue from "./components/ourvalue";
 
 export default function TeamView() {
   return (
-    <div className="">
+    <div className="bg-neutral-50 text-neutral-950">
       <Navbar />
       <AboutUsHero />
       <OurValue />

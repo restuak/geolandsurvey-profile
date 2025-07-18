@@ -12,6 +12,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import SkeletonBlog from "@/app/blog/components/skeletonbloglist";
+import Link from "next/link";
 
 interface Post {
   title: string;
@@ -81,13 +82,13 @@ export default function Blog() {
                   <p className="text-muted-foreground">{post.summary}</p>
                 </CardContent>
                 <CardFooter>
-                  <a
+                  <Link
                     href={`/blog/${post.slug}`}
                     className="flex items-center text-foreground hover:underline"
                   >
-                    Read more
+                    Read this article about geospasial things
                     <ArrowRight className="ml-2 size-4" />
-                  </a>
+                  </Link>
                 </CardFooter>
               </Card>
             ))

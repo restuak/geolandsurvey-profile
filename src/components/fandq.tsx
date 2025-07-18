@@ -58,7 +58,17 @@ const FandQ = ({
           {faqs.map((faq, index) => (
             <div key={index} className="mb-8 flex gap-4">
               <div className="collapse collapse-arrow bg-neutral-300  border border-base-300">
-                <input type="radio" name="my-accordion-2" />
+                <input
+                  id="accordionessay"
+                  type="radio"
+                  name="my-accordion-2"
+                  defaultChecked={index === 0}
+                />
+
+                <label
+                  htmlFor="aaccordionessay"
+                  className="collapse-title font-semibold uppercase"
+                ></label>
                 <div className="collapse-title font-semibold text-[16px] lg:text-lg">
                   {faq.question}
                 </div>
