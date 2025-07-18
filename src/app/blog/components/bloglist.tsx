@@ -38,9 +38,12 @@ export default function BlogList() {
   }, []);
 
   return (
-    <section className="py-10 pt-0 min-md:py-25 bg-neutral-50">
+    <section className="py-10 pt-0 min-md:py-25 bg-neutral-50 min-h-screen">
       <div className="container p-10 pt-0 flex flex-col gap-16 justify-center items-center mx-auto">
         <div className="grid gap-y-10 sm:grid-cols-12 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
+          {!loading && posts.length === 0 && (
+            <p className="text-muted-foreground">Belum ada postingan blog.</p>
+          )}
           {loading ? (
             <>
               <SkeletonBlog />
@@ -94,12 +97,13 @@ export default function BlogList() {
                   </div>
                   <div className="order-first sm:order-last sm:col-span-5">
                     <a href={`/blog/${post.slug}`} className="block">
-                      <div className="aspect-16/9  rounded-lg border border-border">
+                      <div className="rounded-lg border border-border overflow-hidden">
                         <img
+                          key={post.slug}
                           src={post.images}
                           alt={post.title}
                           loading="lazy"
-                          className="h-full w-full object-contain transition-opacity duration-200 hover:opacity-70"
+                          className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"
                         />
                       </div>
                     </a>

@@ -70,7 +70,7 @@ export default function BlogPage() {
   }
 
   return (
-    <section className="py-24 px-4 md:px-8">
+    <section className="py-24 px-4 md:px-8 min-h-screen bg-neutral-50 ...">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar Info */}
@@ -100,14 +100,16 @@ export default function BlogPage() {
           <article className="lg:w-2/3 space-y-8 text-base leading-relaxed sm:text-lg lg:text-xl">
             {blog.images && (
               <img
+                key={blog.slug}
                 src={blog.images}
                 alt={blog.title}
-                className="rounded-xl w-full h-auto object-cover aspect-video"
+                loading="lazy"
+                className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"
               />
             )}
             <div
               dangerouslySetInnerHTML={{
-                __html: "<p>Test blog content here</p>",
+                __html: "<p>Hello from blog post!</p>",
               }}
             />
           </article>
