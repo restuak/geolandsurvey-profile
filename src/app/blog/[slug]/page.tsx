@@ -22,7 +22,7 @@ export default function BlogPage() {
 
   useEffect(() => {
     const encodedSlug = encodeURIComponent(`slug='${slug}'`);
-    
+
     const fetchBlog = async () => {
       try {
         const res = await fetch(
@@ -50,7 +50,7 @@ export default function BlogPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p>Memuat artikel...</p>
+        <p>Loading...</p>
       </div>
     );
   }
@@ -59,12 +59,12 @@ export default function BlogPage() {
     return (
       <div className="min-h-screen flex items-center justify-center text-center px-4">
         <div>
-          <h1 className="text-2xl font-bold mb-2">Artikel tidak ditemukan</h1>
+          <h1 className="text-2xl font-bold mb-2">Sorry, You Can Read Other Article</h1>
           <button
             className="bg-blue-600 text-white px-4 py-2 rounded"
             onClick={() => router.push("/blog")}
           >
-            Kembali ke Blog
+            Back to Blog List
           </button>
         </div>
       </div>
@@ -82,7 +82,7 @@ export default function BlogPage() {
               className="text-muted-foreground hover:text-primary flex items-center gap-1"
             >
               <ChevronLeft className="h-4 w-4" />
-              Kembali ke blog
+              Back to Blog List
             </button>
 
             <h1 className="text-3xl font-bold leading-tight lg:text-4xl">
@@ -111,11 +111,9 @@ export default function BlogPage() {
             )}
             <div
               className="p-6 "
-              //   className="p-6 prose prose-base sm:prose-lg lg:prose-xl max-w-none dark:prose-invert
-              //  prose-p:mb-6 prose-p:indent-8 prose-p:leading-relaxed"
-              dangerouslySetInnerHTML={{
+                            dangerouslySetInnerHTML={{
                 __html: formatPlainTextToHTML(
-                  blog.content || "<p>Konten tidak tersedia.</p>"
+                  blog.content || "<p>I'm Sorry, Please Back</p>"
                 ),
               }}
             />

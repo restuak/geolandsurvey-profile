@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
 import DataTeam from "./components/datateam";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import AboutUsHero from "./components/aboutushero";
 import OurValue from "./components/ourvalue";
 

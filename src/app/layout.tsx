@@ -2,20 +2,16 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
+import SnackbarProvider from "@/providers/snackbarProvider";
 
-import {
-  ColorSchemeScript,
-  MantineProvider,
-  mantineHtmlProps,
-} from "@mantine/core";
-
+import { MantineProvider, mantineHtmlProps } from "@mantine/core";
+import ScrollUp from "@/components/scrollup";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal",  "italic"] ,
-  
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +28,10 @@ export default function RootLayout({
     <html lang="en" {...mantineHtmlProps}>
       <body className={`${poppins.variable} antialiased`}>
         {" "}
-        <MantineProvider>{children}</MantineProvider>
+        <SnackbarProvider>
+          <MantineProvider>{children}</MantineProvider>
+        </SnackbarProvider>
+        <ScrollUp />
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ export default function OurValue() {
       </div>
 
       <div className="hero-content p-10 w-[70%] min-md:w-screen flex flex-col mx-auto md:flex-row items-center gap-6 md:gap-10 px-4 md:px-20">
-        <img src="/2.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+        <img src="/assets/gl-full.png" className="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 className="text-3xl font-bold text-center">
             Geoland Survey Lab!

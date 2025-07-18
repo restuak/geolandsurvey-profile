@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Link } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import SkeletonBlog from "./skeletonbloglist";
+import { Button } from "@mantine/core";
+import useAuthStore from "@/store/useAuthStore";
 
 interface Post {
   title: string;
@@ -19,13 +21,13 @@ interface Post {
 export default function BlogList() {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<Post[]>([]);
+  const { isLogin } = useAuthStore();
 
   useEffect(() => {
-    
     const fetchPosts = async () => {
       try {
         const res = await axios.get(
-          "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20asc"
+          "https://giftedstar-us.backendless.app/api/data/blog?sortBy=time%20desc"
         );
         setPosts(res.data);
       } catch (err) {
@@ -39,8 +41,18 @@ export default function BlogList() {
   }, []);
 
   return (
-    <section className="py-10 pt-0 min-md:py-25 bg-neutral-50 min-h-screen">
+    <section className="py-10 pt-5 min-md:py-25 bg-neutral-50 min-h-screen">
       <div className="container p-10 pt-0 flex flex-col gap-16 justify-center items-center mx-auto">
+        {!isLogin ? (
+          <h2 className="text-center text-[#992b39] font-semibold">
+            LOGIN TO WRITE NEW ARTICLE
+          </h2>
+        ) : (
+          <Button className="bg-[#992b39] hover:bg-[#7a1c2e] text-white text-xl px-6 py-2 rounded-md">
+            <a href="/blog/create">WRITE BLOG</a>
+          </Button>
+        )}
+
         <div className="grid gap-y-10 sm:grid-cols-12 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
           {!loading && posts.length === 0 && (
             <p className="text-muted-foreground">Belum ada postingan blog.</p>

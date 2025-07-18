@@ -13,7 +13,7 @@ type User = {
     state: string;
     country: string;
   };
-phone: string;
+  phone: string;
 };
 export default async function DataTeam() {
   const teamMan = await axios.get(
@@ -116,9 +116,6 @@ export default async function DataTeam() {
               <div className="text-sm font-semibold text-neutral-950">
                 {surveyTeam.location.state}-{surveyTeam.location.country}
               </div>
-              {/* <div className="text-sm font-normal text-neutral-950 text-center">
-                {surveyTeam.email}
-              </div> */}
               <div className="text-sm font-normal text-neutral-950">
                 {surveyTeam.phone}
               </div>

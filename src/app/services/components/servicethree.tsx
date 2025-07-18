@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-
 export default function ServiceThree() {
   return (
     <main>
@@ -27,7 +26,7 @@ export default function ServiceThree() {
               </div>
             </div>
             <img
-              src="/6.jpg"
+              src="/assets/6.jpg"
               alt="GIS"
               className="h-full w-full object-cover"
             />

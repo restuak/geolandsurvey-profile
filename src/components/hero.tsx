@@ -1,23 +1,23 @@
-"use client"
-import { useEffect } from "react";
+// "use client";
+// import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      alert(
-        "Mohon maaf selama ada pesan ini, website masih saya developing, Kak  | Blog sectionnya masih saya buat...dll | Terima kasih pengertiannya :)"
-      );
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     alert(
+  //       "Mohon maaf selama ada pesan ini, website masih saya developing, Kak  | Blog sectionnya masih saya buat...dll | Terima kasih pengertiannya :)"
+  //     );
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
   return (
     <main id="hero">
       <div
         className="hero h-screen"
         style={{
-          backgroundImage: "url(../7.jpg)",
+          backgroundImage: "url(../assets/7.jpg)",
         }}
       >
         <div className="hero-overlay"></div>

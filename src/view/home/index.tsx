@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import Hero from "@/components/hero";
 import Testi from "@/components/testi";
 import FandQ from "@/components/fandq";

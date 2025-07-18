@@ -5,10 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-  export default function Contact () {
-
+export default function Contact() {
   return (
-    <section id="#contact" className="py-32 pt-0 ">
+    <section id="contact" className="py-32 pt-0 ">
       <div className="container mx-auto p-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
@@ -17,8 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
                 Contact Us
               </h1>
               <p className="text-muted-foreground">
-                We are available for questions, feedback, or collaboration
-                opportunities. Let us know how we can help!
+                Halaman ini masih statis, belum bisa digunakan.
               </p>
             </div>
             <div className="mx-auto w-fit lg:mx-0">
@@ -41,7 +39,7 @@ import { Textarea } from "@/components/ui/textarea";
                 </li>
                 <li>
                   <span className="font-bold">Web: </span>
-                  <a href="geoland.vercel.app" className="underline">
+                  <a href="" className="underline">
                     Geoland Survey Lab
                   </a>
                 </li>
@@ -77,5 +75,4 @@ import { Textarea } from "@/components/ui/textarea";
       </div>
     </section>
   );
-};
-
+}

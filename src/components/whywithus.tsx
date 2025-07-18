@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
 import { useMediaQuery } from "react-responsive";
-import { withUS } from "@/lib/whywithus";
-
+import { withUS } from "@/lib/datastatis/whywithus";
 
 export default function WhyWithUS() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
