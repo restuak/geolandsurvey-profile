@@ -21,10 +21,12 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const encodedSlug = encodeURIComponent(`slug='${slug}'`);
+    
     const fetchBlog = async () => {
       try {
         const res = await fetch(
-          `https://giftedstar-us.backendless.app/api/data/blog?where=slug='${slug}'`
+          `https://giftedstar-us.backendless.app/api/data/blog?where=${encodedSlug}`
         );
         const data: Blog[] = await res.json();
         setBlog(data[0] || null);
@@ -108,8 +110,13 @@ export default function BlogPage() {
               />
             )}
             <div
+              className="p-6 "
+              //   className="p-6 prose prose-base sm:prose-lg lg:prose-xl max-w-none dark:prose-invert
+              //  prose-p:mb-6 prose-p:indent-8 prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: "<p>Hello from blog post!</p>",
+                __html: formatPlainTextToHTML(
+                  blog.content || "<p>Konten tidak tersedia.</p>"
+                ),
               }}
             />
           </article>

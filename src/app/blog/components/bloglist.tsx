@@ -21,6 +21,7 @@ export default function BlogList() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
+    
     const fetchPosts = async () => {
       try {
         const res = await axios.get(
