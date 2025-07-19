@@ -7,7 +7,7 @@ export default function Hero() {
     <main id="hero ">
       <div className="hero h-screen relative overflow-hidden">
         <Image
-          src="/assets/7.avif"
+          src="/assets/hero.avif"
           alt="Hero background"
           fill
           priority
@@ -18,14 +18,15 @@ export default function Hero() {
 
         <div className="hero-content z-20 text-neutral-content text-center">
           <div className="max-w-md">
-            <div className="flex justify-center items-center mb-4">
+            <div className="flex justify-center items-center mb-4 mx-auto">
               <Image
                 alt="Logo Geoland"
                 src="/assets/gl.png"
-                width={120}
-                height={120}
+                width={70}
+                height={70}
                 priority
                 fetchPriority="high"
+                className="min-md:w-32 min-md:w-32"
               />
             </div>
             <h1 className="mb-5 text-4xl min-md:text-5xl font-bold">
