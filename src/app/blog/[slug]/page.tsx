@@ -75,7 +75,6 @@ export default function BlogPage() {
     <section className="py-24 px-4 md:px-8 min-h-screen bg-neutral-50 ...">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Sidebar Info */}
           <aside className="lg:w-1/3 space-y-6">
             <button
               onClick={() => router.push("/blog")}
@@ -98,12 +97,14 @@ export default function BlogPage() {
             </div>
           </aside>
 
-          {/* Main Content */}
           <article className="lg:w-2/3 space-y-8 text-base leading-relaxed sm:text-lg lg:text-xl">
             {blog.images && (
               <img
                 key={blog.slug}
-                src={blog.images}
+                src={blog.images || "/gl-full.png"}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "/gl-full.png";
+                }}
                 alt={blog.title}
                 loading="lazy"
                 className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"
@@ -111,7 +112,7 @@ export default function BlogPage() {
             )}
             <div
               className="p-6 "
-                            dangerouslySetInnerHTML={{
+              dangerouslySetInnerHTML={{
                 __html: formatPlainTextToHTML(
                   blog.content || "<p>I'm Sorry, Please Back</p>"
                 ),

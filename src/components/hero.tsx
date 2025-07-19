@@ -19,7 +19,7 @@ export default function Hero() {
       <div
         className="hero h-screen"
         style={{
-          backgroundImage: "url(../assets/7.jpg)",
+          backgroundImage: "url(../assets/7.avif)",
         }}
       >
         <div className="hero-overlay"></div>
@@ -30,15 +30,14 @@ export default function Hero() {
               src="/assets/gl.png"
               height={150}
               width={150}
-              priority
+              fetchPriority="high"
+              priority={true}
               className="container mx-auto w-35 h-35 relative flex justify-center items-center"
             />
             <h1 className="mb-5 text-4xl min-md:text-5xl font-bold">
               GEOLAND SURVEY
             </h1>
-            <p className="mb-5">
-              Let's talk about geospatial with fun
-            </p>
+            <p className="mb-5">Let's talk about geospatial with fun</p>
             <button className="btn btn-primary bg-[#992b39] border-[#0C566D] ">
               <a href="/#service">OUR SERVICE</a>
             </button>

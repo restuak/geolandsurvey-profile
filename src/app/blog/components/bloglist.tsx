@@ -45,7 +45,7 @@ export default function BlogList() {
       <div className="container p-10 pt-0 flex flex-col gap-16 justify-center items-center mx-auto">
         {!isLogin ? (
           <h2 className="text-center text-[#992b39] font-semibold">
-            LOGIN TO WRITE NEW ARTICLE
+            REGISTER AND LOGIN TO WRITE NEW ARTICLE
           </h2>
         ) : (
           <Button className="bg-[#992b39] hover:bg-[#7a1c2e] text-white text-xl px-6 py-2 rounded-md">
@@ -113,7 +113,10 @@ export default function BlogList() {
                       <div className="rounded-lg border border-border overflow-hidden">
                         <img
                           key={post.slug}
-                          src={post.images}
+                          src={post.images || "/gl-full.png"}
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = "/gl-full.png";
+                          }}
                           alt={post.title}
                           loading="lazy"
                           className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"

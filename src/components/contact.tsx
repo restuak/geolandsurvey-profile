@@ -20,9 +20,9 @@ export default function Contact() {
               </p>
             </div>
             <div className="mx-auto w-fit lg:mx-0">
-              <h3 className="mb-6 text-center text-2xl font-semibold lg:text-left">
+              <h2 className="mb-6 text-center text-2xl font-semibold lg:text-left">
                 Contact Details
-              </h3>
+              </h2>
               <ul className="ml-4 list-disc">
                 <li>
                   <span className="font-bold">Phone: </span>

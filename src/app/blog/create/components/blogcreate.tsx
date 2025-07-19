@@ -141,8 +141,11 @@ export default function CreateBlogPage() {
             type="text"
             name="images"
             placeholder="URL Images"
-            value={form.images}
+            value={form.images || "/gl-full.png"}
             onChange={handleChange}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "/gl-full.png";
+            }}
             className="input input-bordered w-full bg-white border-2 border-neutral-950 rounded-md p-2"
           />
 

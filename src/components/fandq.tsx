@@ -55,29 +55,33 @@ const FandQ = ({
           </p>
         </div>
         <div className="mx-auto mt-14 max-w-xl">
-          {faqs.map((faq, index) => (
-            <div key={index} className="mb-8 flex gap-4">
-              <div className="collapse collapse-arrow bg-neutral-300  border border-base-300">
-                <input
-                  id="accordionessay"
-                  type="radio"
-                  name="my-accordion-2"
-                  defaultChecked={index === 0}
-                />
+          {faqs.map((faq, index) => {
+            const inputId = `accordionessay-${index}`; // ID unik per item
 
-                <label
-                  htmlFor="aaccordionessay"
-                  className="collapse-title font-semibold uppercase"
-                ></label>
-                <div className="collapse-title font-semibold text-[16px] lg:text-lg">
-                  {faq.question}
-                </div>
-                <div className="collapse-content text-[16px] lg:text-lg">
-                  {faq.answer}
+            return (
+              <div key={index} className="mb-8 flex gap-4">
+                <div className="collapse collapse-arrow bg-neutral-300 border border-base-300">
+                  <input
+                    id={inputId}
+                    type="radio"
+                    name="my-accordion-2"
+                    defaultChecked={index === 0}
+                  />
+
+                  <label
+                    htmlFor={inputId}
+                    className="collapse-title font-semibold  text-[16px] lg:text-lg"
+                  >
+                    {faq.question}
+                  </label>
+
+                  <div className="collapse-content text-[16px] lg:text-lg">
+                    {faq.answer}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -114,8 +114,12 @@ export default function RegisterForm() {
                 </div>
                 <DialogFooter className="sm:justify-start">
                   <DialogClose asChild>
-                    <Button type="submit" variant="secondary">
-                      Register
+                    <Button
+                      className="flex justify-center items-center mx-auto"
+                      type="submit"
+                      variant="secondary"
+                    >
+                      REGISTER
                     </Button>
                   </DialogClose>
                 </DialogFooter>

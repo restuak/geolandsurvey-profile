@@ -105,12 +105,22 @@ export default function LoginForm() {
                 </div>
                 <DialogFooter className="sm:justify-start">
                   <DialogClose asChild>
-                    <Button type="submit" variant="secondary">
-                      Login
+                    <Button
+                      className="flex justify-center items-center mx-auto"
+                      type="submit"
+                      variant="secondary"
+                    >
+                      LOGIN
                     </Button>
                   </DialogClose>
                 </DialogFooter>
               </div>
+              <p className="flex justify-center items-center mx-auto">
+                kalau malas regis, bisa coba pakai email dan pass ini
+              </p>
+              <p className="flex justify-center text-neutral-400 items-center mx-auto">
+                restu@gmail.com | admin123
+              </p>
             </Form>
           </DialogContent>
         );
