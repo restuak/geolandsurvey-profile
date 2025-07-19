@@ -24,7 +24,7 @@ export default function CreateBlogPage() {
 
   useEffect(() => {
     if (hasHydrated && !isLogin) {
-      router.push("/");
+      router.push("/blog");
     }
   }, [hasHydrated, isLogin, user]);
 
@@ -152,7 +152,7 @@ export default function CreateBlogPage() {
               onClick={() => router.push("/blog")}
               className="btn bg-gray-300 text-black hover:bg-gray-400 w-1/2"
             >
-              Back to Blog List
+              Blog List
             </button>
 
             <button
@@ -160,7 +160,7 @@ export default function CreateBlogPage() {
               disabled={loading}
               className="btn bg-[#992b39] hover:bg-[#7a1c2e] text-white w-1/2"
             >
-              {loading ? "Saving..." : "Posting Blog"}
+              {loading ? "Saving..." : "Posting"}
             </button>
           </div>
         </form>
