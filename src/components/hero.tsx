@@ -26,7 +26,7 @@ export default function Hero() {
                 height={70}
                 priority
                 fetchPriority="high"
-                className="min-md:w-32 min-md:w-32"
+                className="min-md:w-32 min-md:h-32"
               />
             </div>
             <h1 className="mb-1 text-3xl min-md:mb-5 min-md:text-5xl font-bold">
