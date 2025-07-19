@@ -1,51 +1,49 @@
-// "use client";
-// import { useEffect } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default function Hero() {
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     alert(
-  //       "Mohon maaf selama ada pesan ini, website masih saya developing, Kak  | Blog sectionnya masih saya buat...dll | Terima kasih pengertiannya :)"
-  //     );
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
   return (
-    <main id="hero">
-      <div
-        className="hero h-screen"
-        style={{
-          backgroundImage: "url(../assets/7.avif)",
-        }}
-      >
-        <div className="hero-overlay"></div>
-        <div className="hero-content text-neutral-content text-center">
+    <main id="hero ">
+      <div className="hero h-screen relative overflow-hidden">
+        <Image
+          src="/assets/7.avif"
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover z-0"
+        />
+
+        <div className="absolute inset-0 bg-black/60 z-10" />
+
+        <div className="hero-content z-20 text-neutral-content text-center">
           <div className="max-w-md">
-            <Image
-              alt="Logo Geoland"
-              src="/assets/gl.png"
-              height={150}
-              width={150}
-              fetchPriority="high"
-              priority={true}
-              className="container mx-auto w-35 h-35 relative flex justify-center items-center"
-            />
+            <div className="flex justify-center items-center mb-4">
+              <Image
+                alt="Logo Geoland"
+                src="/assets/gl.png"
+                width={120}
+                height={120}
+                priority
+                fetchPriority="high"
+              />
+            </div>
             <h1 className="mb-5 text-4xl min-md:text-5xl font-bold">
               GEOLAND SURVEY
             </h1>
             <p className="mb-5">Let's talk about geospatial with fun</p>
-            <button className="btn btn-primary bg-[#992b39] border-[#0C566D] ">
+            <button
+              className="btn btn-primary bg-[#992b39] border-[#0C566D]"
+              aria-label="View our service section"
+            >
               <a href="/#service">OUR SERVICE</a>
             </button>
           </div>
         </div>
       </div>
+
       <section>
-        <div className="absolute bottom-[-35px] min-lg:bottom-[-65px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-xl px-6 py-4 w-[300px] min-lg:w-[900px] flex justify-between text-center">
+        <div className="z-50 absolute bottom-[-35px] min-lg:bottom-[-65px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-xl px-6 py-4 w-[300px] min-lg:w-[900px] flex justify-between text-center">
           <div>
             <p className="text-sm min-lg:text-2xl text-gray-500">Clients</p>
             <p className="text-2xl min-lg:text-5xl p-1 min-lg:p-5 font-bold text-black">

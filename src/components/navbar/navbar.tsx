@@ -8,15 +8,15 @@ import { Menu } from "lucide-react";
 export default function Navbar() {
   const { isLogin, clearAuth } = useAuthStore((state) => state);
   return (
-    <div className="navbar bg-[#0C566D] shadow-sm fixed w-full backdrop-blur-md z-50">
+    <div className="navbar bg-[#0C566D] shadow-sm fixed w-full backdrop-blur-md z-200">
       <div className="navbar-start">
         <div className="dropdown">
-          <Button
+          <button
             aria-label="Open menu"
             className="btn btn-ghost btn-circle bg-[#992b39]"
           >
             <Menu />
-          </Button>
+          </button>
           <ul
             tabIndex={0}
             className="text-white menu menu-sm dropdown-content bg-[#992b39] rounded-box z-1 mt-3 w-52 p-2 shadow"

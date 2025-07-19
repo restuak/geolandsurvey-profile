@@ -115,8 +115,8 @@ export default function LoginForm() {
                   </DialogClose>
                 </DialogFooter>
               </div>
-              <p className="flex justify-center items-center mx-auto">
-                kalau malas regis, bisa coba pakai email dan pass ini
+              <p className="flex justify-center items-center mx-auto text-center">
+                bisa coba pakai email dan pass ini, atau register untuk mencoba
               </p>
               <p className="flex justify-center text-neutral-400 items-center mx-auto">
                 restu@gmail.com | admin123
