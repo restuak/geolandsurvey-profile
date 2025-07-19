@@ -29,10 +29,10 @@ export default function Hero() {
                 className="min-md:w-32 min-md:w-32"
               />
             </div>
-            <h1 className="mb-5 text-4xl min-md:text-5xl font-bold">
+            <h1 className="mb-1 text-3xl min-md:mb-5 min-md:text-5xl font-bold">
               GEOLAND SURVEY
             </h1>
-            <p className="mb-5">Let's talk about geospatial with fun</p>
+            <p className="mb-6">Let's talk about geospatial with fun</p>
             <button
               className="btn btn-primary bg-[#992b39] border-[#0C566D]"
               aria-label="View our service section"
