@@ -3,7 +3,6 @@ import { LoginModal } from "./login/login";
 import { RegisterModal } from "./regis/regis";
 import useAuthStore from "@/store/useAuthStore";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 export default function Navbar() {
   const { isLogin, clearAuth } = useAuthStore((state) => state);

@@ -29,13 +29,23 @@ export default function BlogPage() {
           `https://giftedstar-us.backendless.app/api/data/blog?where=${encodedSlug}`
         );
         const data: Blog[] = await res.json();
-        setBlog(data[0] || null);
+
+
+        const blogWithFallback = data[0]
+          ? {
+              ...data[0],
+              images: data[0].images?.trim() ? data[0].images : "/assets/gl-full.png",
+            }
+          : null;
+
+        setBlog(blogWithFallback);
       } catch (e) {
         setBlog(null);
       } finally {
         setLoading(false);
       }
     };
+
     if (slug) fetchBlog();
   }, [slug]);
 
@@ -59,7 +69,9 @@ export default function BlogPage() {
     return (
       <div className="min-h-screen flex items-center justify-center text-center px-4">
         <div>
-          <h1 className="text-2xl font-bold mb-2">Sorry, You Can Read Other Article</h1>
+          <h1 className="text-2xl font-bold mb-2">
+            Sorry, You Can Read Other Article
+          </h1>
           <button
             className="bg-blue-600 text-white px-4 py-2 rounded"
             onClick={() => router.push("/blog")}
@@ -72,7 +84,7 @@ export default function BlogPage() {
   }
 
   return (
-    <section className="py-24 px-4 md:px-8 min-h-screen bg-neutral-50 ...">
+    <section className="py-24 px-4 md:px-8 min-h-screen bg-neutral-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           <aside className="lg:w-1/3 space-y-6">
@@ -98,20 +110,18 @@ export default function BlogPage() {
           </aside>
 
           <article className="lg:w-2/3 space-y-8 text-base leading-relaxed sm:text-lg lg:text-xl">
-            {blog.images && (
-              <img
-                key={blog.slug}
-                src={blog.images || "/gl-full.png"}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "/gl-full.png";
-                }}
-                alt={blog.title}
-                loading="lazy"
-                className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"
-              />
-            )}
+            <img
+              key={blog.slug}
+              src={blog.images}
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "/gl-full.png";
+              }}
+              alt={blog.title}
+              loading="lazy"
+              className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"
+            />
             <div
-              className="p-6 "
+              className="p-6"
               dangerouslySetInnerHTML={{
                 __html: formatPlainTextToHTML(
                   blog.content || "<p>I'm Sorry, Please Back</p>"

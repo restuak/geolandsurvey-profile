@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { ArrowRight, Link } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import SkeletonBlog from "./skeletonbloglist";
 import { Button } from "@mantine/core";
 import useAuthStore from "@/store/useAuthStore";
+export const dynamic = "force-dynamic";
 
 interface Post {
   title: string;
@@ -113,10 +114,11 @@ export default function BlogList() {
                       <div className="rounded-lg border border-border overflow-hidden">
                         <img
                           key={post.slug}
-                          src={post.images || "/gl-full.png"}
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = "/gl-full.png";
-                          }}
+                          src={
+                            post.images?.trim()
+                              ? post.images
+                              : "/assets/gl-full.png"
+                          }
                           alt={post.title}
                           loading="lazy"
                           className="w-full h-auto object-cover will-change-transform [backface-visibility:hidden]"

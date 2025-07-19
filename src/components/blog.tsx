@@ -22,9 +22,11 @@ interface Post {
   label?: string[];
   slug: string;
 }
+
 export default function Blog() {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<Post[]>([]);
+
   useEffect(() => {
     axios
       .get(
@@ -50,11 +52,10 @@ export default function Blog() {
             geospasial surveying
           </p>
         </div>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 lg:gap-8">
           {loading ? (
-            <>
-              <SkeletonBlog />
-            </>
+            <SkeletonBlog />
           ) : (
             posts.slice(0, 2).map((post) => (
               <Card
@@ -67,7 +68,12 @@ export default function Blog() {
                     className="transition-opacity duration-200 fade-in hover:opacity-70"
                   >
                     <img
-                      src={post.images}
+                      src={
+                        post.images?.trim()
+                          ? post.images
+                          : "/assets/gl-full.png"
+                      }
+                      
                       alt={post.title}
                       className="h-full w-full object-cover object-center"
                     />
@@ -86,7 +92,7 @@ export default function Blog() {
                     href={`/blog/${post.slug}`}
                     className="flex items-center text-foreground hover:underline"
                   >
-                    Read this article about geospasial things
+                    Read this article about geospatial things
                     <ArrowRight className="ml-2 size-4" />
                   </Link>
                 </CardFooter>
@@ -94,6 +100,7 @@ export default function Blog() {
             ))
           )}
         </div>
+
         <Button
           variant="link"
           className="w-full sm:w-auto text-md min-md:text-xl"

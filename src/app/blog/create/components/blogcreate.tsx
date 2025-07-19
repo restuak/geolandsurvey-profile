@@ -91,7 +91,7 @@ export default function CreateBlogPage() {
           <input
             type="text"
             name="title"
-            placeholder="Title..."
+            placeholder="Title...(Required)"
             value={form.title}
             onChange={handleChange}
             className="input input-bordered w-full bg-white border-2 border-neutral-950 rounded-md p-2"
@@ -108,14 +108,15 @@ export default function CreateBlogPage() {
           <input
             type="text"
             name="author"
-            placeholder="Author..."
+            placeholder="Author...(Required)"
             value={form.author}
             onChange={handleChange}
+            required
             className="input input-bordered w-full bg-white border-2 border-neutral-950 rounded-md p-2"
           />
           <textarea
             name="summary"
-            placeholder="Summary article..."
+            placeholder="Summary...(Required)"
             value={form.summary}
             onChange={handleChange}
             className="textarea textarea-bordered h-24 w-full bg-white border-2 border-neutral-950 rounded-md p-2"
@@ -123,7 +124,7 @@ export default function CreateBlogPage() {
           />
           <textarea
             name="content"
-            placeholder="Content..."
+            placeholder="Content...(Required)"
             value={form.content}
             onChange={handleChange}
             className="textarea textarea-bordered h-60 w-full bg-white border-2 border-neutral-950 rounded-md p-2"
@@ -140,12 +141,8 @@ export default function CreateBlogPage() {
           <input
             type="text"
             name="images"
-            placeholder="URL Images"
-            value={form.images || "/gl-full.png"}
-            onChange={handleChange}
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "/gl-full.png";
-            }}
+            placeholder="Input URL images or leave blank...(Optional)"
+            value={form.images}
             className="input input-bordered w-full bg-white border-2 border-neutral-950 rounded-md p-2"
           />
 
