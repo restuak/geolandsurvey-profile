@@ -23,14 +23,14 @@ export default function Hero() {
               <Image
                 alt="Logo Geoland"
                 src="/assets/gl.png"
-                width={70}
-                height={70}
+                width={75}
+                height={75}
                 priority
                 fetchPriority="high"
-                className="hidden min-md:inline min-md:w-32 min-md:h-32"
+                className="min-md:w-32 min-md:h-32"
               />
             </div>
-            <h1 className="mb-1 min-md:mb-5 min-md:text-5xl font-bold">
+            <h1 className="mb-1 text-3xl min-md:mb-5 min-md:text-5xl font-bold">
               GEOLAND SURVEY
             </h1>
             <p className="mb-6">Let's talk about geospatial with fun</p>
@@ -38,7 +38,7 @@ export default function Hero() {
               className="btn btn-primary bg-[#992b39] border-[#0C566D]"
               aria-label="View our service section"
             >
-              <a href="/#service">OUR SERVICE</a>
+              <a href="/#service">OUR SERVICES</a>
             </button>
           </div>
         </div>
