@@ -11,6 +11,7 @@ export default function Hero() {
           alt="Hero background"
           fill
           priority
+          fetchPriority="high"
           className="object-cover z-0"
         />
 
@@ -29,7 +30,7 @@ export default function Hero() {
                 className="min-md:w-32 min-md:h-32"
               />
             </div>
-            <h1 className="mb-1 text-3xl min-md:mb-5 min-md:text-5xl font-bold">
+            <h1 className="mb-1 text-2xl min-md:mb-5 min-md:text-5xl font-bold">
               GEOLAND SURVEY
             </h1>
             <p className="mb-6">Let's talk about geospatial with fun</p>
